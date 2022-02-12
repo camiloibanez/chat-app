@@ -7,6 +7,7 @@
     <title>Chat App</title>
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/styles.min.css">
+    <link rel="stylesheet" href="/css/styles2.css">
 </head>
 <body>
     <div class="centered-form">
@@ -16,10 +17,21 @@
                 <label for="">Display name</label>
                 <input type="text" name="username" placeholder="Display name" required>
                 <label for="">Room</label>
-                <input type="text" name="room" placeholder="Room" required>
+                <input type="text" id="room-input" name="room" placeholder="Room">
+                <select id="rooms" onchange="selectRoom(event)">
+                    <option disabled selected>Open Rooms</option>
+                </select>
                 <button>Join</button>
             </form>
         </div>
     </div>
+
+    <script id="room-option-template" type="text/html">
+        <option value="{{room}}">{{room}}</option>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/roomPopulator.js"></script>
 </body>
 </html>
