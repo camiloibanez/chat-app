@@ -5,10 +5,7 @@ const optionsTemplate = document.querySelector('#room-option-template').innerHTM
 const roomInput = document.querySelector('#room-input')
 
 socket.on('roomsInUse', (rooms) => {
-    dropdown.innerHTML = ''
-    
-    const headHTML = '<option disabled selected>Open Rooms</option>'
-    dropdown.insertAdjacentHTML("afterbegin", headHTML)
+    dropdown.innerHTML = '<option disabled selected>Open Rooms</option>'
 
     rooms.forEach((room) => {
         const html = Mustache.render(optionsTemplate, {
