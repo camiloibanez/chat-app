@@ -1,6 +1,6 @@
 # ChatMouse
 
-An online chat room application. It is hosted live on heroku [here](https://dashboard.heroku.com/apps/chat-mouse).
+An online chat room application. It is hosted live on heroku [here](https://chat-mouse.herokuapp.com/).
 
 It is built on Node.js and Express with Socket.io.
 
